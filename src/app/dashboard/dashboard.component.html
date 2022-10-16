@@ -1,9 +1,18 @@
 <h2>Top Heroes</h2>
-<div class="heroes-menu">
-  <a *ngFor="let hero of heroes"
-      routerLink="/detail/{{hero.id}}">
-      {{hero.name}}
+<!-- <app-spinner *ngIf="service.isLoadingHeroes$ | async"></app-spinner>
+<div class="heroes-menu" *ngIf="service.topHeroes$ | async as heroes">
+  <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+    {{hero.name}}
   </a>
-</div>
+</div> -->
+
+<ng-container *ngIf="service.topHeroes$ | async as loadedHeroes">
+  <app-spinner *ngIf="loadedHeroes.isLoading"></app-spinner>
+  <div class="heroes-menu" *ngIf="loadedHeroes.value as heroes">
+    <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+      {{hero.name}}
+    </a>
+  </div>
+</ng-container>
 
 <app-hero-search></app-hero-search>
