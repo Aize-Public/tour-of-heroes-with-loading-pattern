@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-spinner',
-  template: `<div class="spinner"></div>`,
+  template: `<div class="spinner-container"><div class="spinner"></div></div>`,
   styles: [
     `
+      .spinner-container {
+        padding: 32px 0;
+      }
       .spinner {
         border: 8px solid #f3f3f3;
         border-radius: 50%;
         border-top: 8px solid #3498db;
         width: 80px;
         height: 80px;
-        -webkit-animation: spin 2s linear infinite; /* Safari */
         animation: spin 2s linear infinite;
         margin: auto;
       }
@@ -27,8 +29,5 @@ import { Component, OnInit } from '@angular/core';
     `,
   ],
 })
-export class SpinnerComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+export class SpinnerComponent {
 }
