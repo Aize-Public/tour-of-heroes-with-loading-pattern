@@ -15,8 +15,8 @@ export class TopHeroesDecoratedWithLoadingPatternService extends WithLoading {
     this.topHeroes$ = heroService.getHeroes().pipe(
       map((heroes) => heroes.slice(0, 5)),
       map(topHeroes => this.buildReadyValue(topHeroes)),
-      this.startWithLoading()
+      this.startWithLoading(),
+      this.catchLoadingError()
     )
-
   }
 }

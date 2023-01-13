@@ -29,7 +29,6 @@ import { TopHeroesWithTapLoading2Service } from './top-heroes-with-tap-loading2.
       color: #fff;
     }
 `],
-providers: [TopHeroesWithTapLoading2Service]
 })
 export class TopHeroesWithTapLoading2Component implements OnInit, AfterViewChecked {
   constructor(public service: TopHeroesWithTapLoading2Service) { 
@@ -38,11 +37,8 @@ export class TopHeroesWithTapLoading2Component implements OnInit, AfterViewCheck
   ngAfterViewChecked(): void {
     console.log('View checked');
   }
-  
-  
 
   ngOnInit(): void {
     this.service.isLoadingHeroes$.subscribe(isLoadingHeroes => console.log('isLoadingHeroes', isLoadingHeroes));
   }
-
 }
