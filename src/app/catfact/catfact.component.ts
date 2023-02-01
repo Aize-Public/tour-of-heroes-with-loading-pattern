@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
     </div>
   `,
 })
-export class CatfactComponent implements OnInit {
+export class CatFactComponent implements OnInit {
   isLoadingCatFact = false;
   catFact?: string;
 

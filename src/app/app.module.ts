@@ -15,7 +15,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SpinnerComponent } from './spinner.component';
-import { CatfactComponent } from './catfact/catfact.component';
+import { CatFactComponent } from './catfact/catfact.component';
 import { TopHeroesWithTapLoadingComponent } from './top-heroes-with-tap-loading/top-heroes-with-tap-loading.component';
 import { TopHeroesWithTapLoading2Component } from './top-heroes-with-tap-loading2/top-heroes-with-tap-loading2.component';
 import { TopHeroesWithLoadingPatternComponent } from './top-heroes-with-loading-pattern/top-heroes-with-loading-pattern.component';
@@ -42,7 +42,7 @@ import { TopHeroesWithLoadingPatternComponent } from './top-heroes-with-loading-
     MessagesComponent,
     HeroSearchComponent,
     SpinnerComponent,
-    CatfactComponent,
+    CatFactComponent,
     TopHeroesWithTapLoadingComponent,
     TopHeroesWithTapLoading2Component,
     TopHeroesWithLoadingPatternComponent
